@@ -18,7 +18,7 @@ const CurrentWeather = () => {
   return (
     <SafeAreaView style={wrapper}>
       <View style={container}>
-        <Feather name="sun" size={100} color="black" />
+        <Feather name="sun" size={100} color="#f0da82" />
         <Text style={temp}>6</Text>
         <Text style={feels}>Feels like 5</Text>
         <RowText
@@ -31,7 +31,7 @@ const CurrentWeather = () => {
       </View>
       <RowText
         messageOne={"It's sunny"}
-        messageTwo={"It's perfect t-shirt weather"}
+        messageTwo={'Perfect t-shirt weather'}
         containerStyles={bodyWrapper}
         messageOneStyles={description}
         messageTwoStyles={message}
@@ -48,18 +48,18 @@ const styles = StyleSheet.create({
   },
   wrapper: {
     flex: 1,
-    backgroundColor: 'pink'
+    backgroundColor: '#849b9c'
   },
   temp: {
-    color: 'black',
+    color: 'tomato',
     fontSize: 48
   },
   feels: {
     fontSize: 30,
-    color: 'black'
+    color: '#fcf7d8'
   },
   highlow: {
-    color: 'black',
+    color: '#fff9f2',
     fontSize: 20
   },
   highlowWrapper: {
@@ -72,10 +72,12 @@ const styles = StyleSheet.create({
     marginBottom: 40
   },
   description: {
-    fontSize: 48
+    fontSize: 48,
+    color: '#f0da82'
   },
   message: {
-    fontSize: 30
+    fontSize: 28,
+    color: '#fcf7d8'
   }
 })
 export default CurrentWeather

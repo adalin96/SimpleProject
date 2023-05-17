@@ -17,9 +17,9 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center'
   },
-    textTheme: {
+  textTheme: {
     fontWeight: 'bold',
-    color: 'white'
+    color: '#f0da82'
   }
 })
 export default IconText

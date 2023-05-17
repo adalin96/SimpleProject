@@ -14,7 +14,7 @@ const City = () => {
     container,
     countryName,
     cityName,
-    cityText,
+    cityCountryText,
     populationWrapper,
     populationText,
     riseSetWrapper,
@@ -28,12 +28,12 @@ const City = () => {
         source={require('C:\\Users\\nada\\reactProject\\WeatherApp\\assets\\city-background.jpg')}
         style={imageLayout}
       >
-        <Text style={[cityName, cityText]}>Chaouen</Text>
-        <Text style={[countryName, cityText]}>Morocco</Text>
+        <Text style={[cityName, cityCountryText]}>Chaouen</Text>
+        <Text style={[countryName, cityCountryText]}>Morocco</Text>
         <View style={[populationWrapper, rowLayout]}>
           <IconText
             iconName={'user'}
-            iconColor={'red'}
+            iconColor={'tomato'}
             bodyText={'8000'}
             bodyTextStyle={populationText}
           />
@@ -41,13 +41,13 @@ const City = () => {
         <View style={[riseSetWrapper, rowLayout]}>
           <IconText
             iconName={'sunrise'}
-            iconColor={'#FFBDBDBD'}
+            iconColor={'#f0da82'}
             bodyText={'10:46:58am'}
             bodyTextStyle={riseSetText}
           />
           <IconText
             iconName={'sunset'}
-            iconColor={'#FFBDBDBD'}
+            iconColor={'#f0da82'}
             bodyText={'17:28:15pm'}
             bodyTextStyle={riseSetText}
           />
@@ -71,10 +71,9 @@ const styles = StyleSheet.create({
   countryName: {
     fontSize: 20
   },
-  cityText: {
+  cityCountryText: {
     justifyContent: 'center',
     alignSelf: 'center',
-    fontSize: 30,
     fontWeight: 'bold',
     color: 'white'
   },
@@ -84,8 +83,7 @@ const styles = StyleSheet.create({
   },
   populationText: {
     fontSize: 25,
-    marginLeft: 7.5,
-    color: 'red'
+    marginLeft: 7.5
   },
   riseSetWrapper: {
     justifyContent: 'space-around',
@@ -97,7 +95,8 @@ const styles = StyleSheet.create({
   },
   rowLayout: {
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginBottom: 100
   }
 })
 export default City

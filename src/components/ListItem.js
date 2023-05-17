@@ -3,11 +3,11 @@ import { View, Text, StyleSheet } from 'react-native'
 import { Feather } from '@expo/vector-icons'
 
 const ListItem = (props) => {
-  const { dt_txt, min, max, condition } = props
+  const { dt_txt, min, max } = props
   const { item, date, temp } =  styles
   return (
     <View style={item}>
-      <Feather name={'sun'} size={50} color={'white'} />
+      <Feather name={'sun'} size={50} color={'#f0da82'} />
       <Text style={date}>{dt_txt}</Text>
       <Text style={temp}>{min}</Text>
       <Text style={temp}>{max}</Text>
@@ -23,15 +23,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    borderWidth: 5,
-    backgroundColor: '#FFCBC4'
+    borderWidth: 1,
+    borderColor: 'tomato',
+    backgroundColor: '#9baeaa'
   },
   temp: {
-    color: 'white',
+    color: '#fff9f2',
     fontSize: 20
   },
   date: {
-    color: 'white',
+    color: '#fcf7d8',
     fontSize: 15
   }
 })
