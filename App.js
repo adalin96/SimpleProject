@@ -1,36 +1,19 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { ActivityIndicator } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import Tabs from './src/components/Tabs'
 import { View, StyleSheet } from 'react-native'
-import * as Location from 'expo-location'
 import Constants from 'expo-constants'
 
-const TEST_KEY = Constants.manifest.extra.TEST_KEY
-// api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
+import { useGetWeather } from './src/hooks/useGetWeather'
+const WEATHER_API_KEY = Constants.manifest.extra.WEATHER_API_KEY
 
-console.log(TEST_KEY)
+console.log('hi hello ayo')
+console.log(WEATHER_API_KEY)
 
 const App = () => {
-  const [loading, setLoading] = useState(true)
-  const [location, setLocation] = useState(null)
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-    ;(async () => {
-      let { status } = await Location.requestForegroundPermissionsAsync()
-      if (status !== 'granted') {
-        setError('permission to access location was denied')
-        return
-      }
-      let location = await Location.getCurrentPositionAsync({})
-      setLocation(location)
-    })()
-  }, [])
-
-  if (location) {
-    console.log(location)
-  }
+  const [loading, error, weather] = useGetWeather()
+  console.log(loading, error, weather)
 
   if (loading) {
     return (
