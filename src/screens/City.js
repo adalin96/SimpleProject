@@ -4,7 +4,7 @@ import {
   Text,
   StyleSheet,
   ImageBackground,
-  StatusBar,
+  // StatusBar,
   View
 } from 'react-native'
 import IconText from '../components/IconText'
@@ -60,7 +60,7 @@ const City = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: StatusBar.currentHeight || 0
+    // marginTop: StatusBar.currentHeight || 0
   },
   imageLayout: {
     flex: 1
