@@ -21,13 +21,14 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.simpleProject.weatherApp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
-      "WEATHER_API_KEY" : "b1cea574de75d313ffa6cb0b23784e36"
+      "WEATHER_API_KEY": "b1cea574de75d313ffa6cb0b23784e36"
     }
   }
 }
